@@ -25,8 +25,10 @@ titanic-survival-app/
 ├── titanic.pkl           # Pre-trained ML model
 ├── requirements.txt      # App dependencies
 ├── templates/
-│   ├── index.html        # Form page
-│   └── result.html       # Results page
+│   ├── about.html          # App home route ("/")
+│   ├── titanicPredictor.html # Passenger input form
+│   ├── predict.html        # Results page showing survival probability
+│   └── base.html           # Shared layout for template inheritance
 ├── static/
 │   └── style.css         # (Optional) Styling for front-end
 └── README.md             # You're reading it :)
