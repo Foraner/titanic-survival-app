@@ -1,0 +1,6 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; line-height: 1.5; }
+header { margin-bottom: 1.25rem; }
+.topnav a { margin-right: 1rem; text-decoration: none; }
+form label { display:block; margin-top: .75rem; }
+input[type="number"], select { width: 14rem; padding: .4rem; }
+.btn { margin-top: 1rem; padding: .5rem .9rem; cursor: pointer; }
