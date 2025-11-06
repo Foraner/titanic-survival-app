@@ -1,6 +1,75 @@
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; line-height: 1.5; }
+/* Layout & typography */
+:root { --maxw: 780px; --pad: 1.25rem; }
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #f7f9fc;
+  color: #0f172a;
+}
+section {
+  max-width: var(--maxw);
+  margin: 2rem auto;
+  padding: 0 var(--pad);
+  line-height: 1.55;
+}
+
+/* Header / nav */
 header { margin-bottom: 1.25rem; }
-.topnav a { margin-right: 1rem; text-decoration: none; }
-form label { display:block; margin-top: .75rem; }
-input[type="number"], select { width: 14rem; padding: .4rem; }
-.btn { margin-top: 1rem; padding: .5rem .9rem; cursor: pointer; }
+.topnav {
+  display: flex; gap: .75rem; flex-wrap: wrap;
+  background: #0ea5e9;          /* light blue bar */
+  padding: .6rem .8rem; border-radius: .6rem;
+}
+.topnav a {
+  color: white; text-decoration: none; font-weight: 600;
+  padding: .35rem .6rem; border-radius: .4rem;
+  opacity: .95;
+}
+.topnav a:hover, .topnav a.active { background: rgba(255,255,255,.18); }
+
+/* Flash messages */
+.flash {
+  background: #fff8e1; color: #92400e;
+  border: 1px solid #fde68a; border-radius: .5rem;
+  padding: .6rem .8rem; margin: .75rem 0;
+}
+
+/* Form card */
+form {
+  background: white;
+  border: 1px solid #e5e7eb; border-radius: .9rem;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, .06);
+  max-width: 520px;
+}
+form label { display: block; margin-top: .9rem; font-weight: 600; }
+input[type="number"], select {
+  width: 100%; max-width: 18rem;
+  padding: .55rem .6rem; margin-top: .35rem;
+  border: 1px solid #cbd5e1; border-radius: .55rem;
+  background: #f8fafc;
+}
+input[type="number"]:focus, select:focus {
+  outline: none; border-color: #0ea5e9; box-shadow: 0 0 0 3px rgba(14,165,233,.2);
+}
+
+/* Buttons */
+.btn, button {
+  margin-top: 1rem; padding: .6rem 1rem;
+  border: none; border-radius: .6rem;
+  background: #0ea5e9; color: white; font-weight: 700; cursor: pointer;
+}
+.btn:hover, button:hover { filter: brightness(0.95); }
+
+/* Titles */
+h1 { margin: .2rem 0 1rem; font-size: 1.6rem; }
+h2 { margin: .6rem 0 1rem; font-size: 1.25rem; }
+h3 { margin: 1rem 0 .5rem; font-size: 1.05rem; color: #334155; }
+
+/* Links in content */
+a { color: #0ea5e9; }
+a:hover { text-decoration: underline; }
+
+/* Small helper */
+p.note { opacity: .8; font-size: .95rem; }
